@@ -1,0 +1,6 @@
+
+ testGetNoteById = true
+ testUpdateNote = true
+ testInsertNote = true
+ testDeleteNote = true
+ testViewAll = true
