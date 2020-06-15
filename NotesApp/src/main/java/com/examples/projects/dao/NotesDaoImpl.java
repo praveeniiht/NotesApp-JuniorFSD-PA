@@ -50,7 +50,7 @@ public class NotesDaoImpl implements NotesDao {
 	public Notes getNoteById(Long id) {
 		// TODO Auto-generated method stub
 		
-		Notes note = sessionFactory.getCurrentSession().load(Notes.class,id);
+		Notes note = (Notes) sessionFactory.getCurrentSession().load(Notes.class,id);
 		System.out.println(note.getAuthor());
 		return note;
 		

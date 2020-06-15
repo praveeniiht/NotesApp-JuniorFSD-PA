@@ -86,7 +86,6 @@ class NotesServiceImplTest {
 		List<Notes> noteList;
 		list.add(new Notes());
 		list.add(new Notes());
-	    
 	    when(notesServiceImpl.getAllNodes()).thenReturn((List<Notes>) list);
 		noteList = notesServiceImpl.getAllNodes();
 		File file = new File("output_service_revised.txt");

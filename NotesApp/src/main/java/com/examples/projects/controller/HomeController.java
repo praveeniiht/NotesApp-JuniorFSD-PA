@@ -22,12 +22,9 @@ import com.examples.projects.service.NotesService;
 
 @Controller
 public class HomeController {
-
+   
 	@Autowired
 	private NotesService notesService;
-	public HomeController(NotesService noteService) {
-		this.notesService=noteService;
-	}
 	 
 	/*
 	  Initial request will be mapped to this method and redirects to home page

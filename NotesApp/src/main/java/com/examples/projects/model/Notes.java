@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Table;
+
 import javax.persistence.Id;
 
 @Entity
@@ -24,12 +25,6 @@ public class Notes implements Serializable {
 	@Column
 	private String author;
 	
-	@Override
-	public String toString() {
-		return "Notes [id=" + id + ", title=" + title + ", author=" + author + ", description=" + description
-				+ ", status=" + status + "]";
-	}
-
 	@Column
 	private String description;
 	

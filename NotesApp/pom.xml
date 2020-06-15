@@ -10,6 +10,7 @@
 	<packaging>war</packaging>
 
 	<name>projects</name>
+	
 	<url>http://maven.apache.org</url>
 
 	<properties>
