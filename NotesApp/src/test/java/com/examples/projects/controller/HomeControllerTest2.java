@@ -52,34 +52,22 @@ class HomeControllerTest2 {
 		
 	@BeforeEach
 	public void setup() {
-		System.out.println("Inside the before");
 		MockitoAnnotations.initMocks(this);
 		this.mockmvc = MockMvcBuilders.standaloneSetup(homeController).build();
-		if(mockmvc!=null)
-			System.out.println("not null");
-		else
-			System.out.println("Null");
 	}
 	
 	@Test
 	void testShowHomePage() throws Exception {
-		System.out.println("Inside the testShowHomePage");
-		if(mockmvc!=null)
-			System.out.println("not null");
-		else
-			System.out.println("Null");
-		MvcResult result = this.mockmvc.perform(get("/")).andExpect(view().name("index")).andReturn();
-	//MvcResult result = mockmvc.perform(get("/")).andExpect(view().name("index")).andReturn();
-		File file = new File("output_controller_revised.txt"); 
-		FileUtils.write(file, "\n testShowHomePage="+(result.getResponse().getStatus() == HttpStatus.OK.value() ? true : false), true);
+	MvcResult result = this.mockmvc.perform(get("/")).andExpect(view().name("index")).andReturn();
+	File file = new File("output_controller_revised.txt"); 
+	FileUtils.write(file, "\n testShowHomePage="+(result.getResponse().getStatus() == HttpStatus.OK.value() ? true : false), true);
 	}
 
-	/*
+	
 	@Test
 	void testStatusPage() throws Exception {
 		MvcResult result = this.mockmvc.perform(get("/statusManager")).andExpect(view().name("statusmanager")).andReturn();
 		File file = new File("output_controller_revised.txt"); 
-		//FileUtils.write(file, "\n testShowHomePage="+(result.getResponse().getStatus() == HttpStatus.OK.value() ? true : false), true);
 		FileUtils.write(file, "\n testStatusPage="+(result!=null ? true : false), true);
 	}
 	
@@ -87,7 +75,6 @@ class HomeControllerTest2 {
 	void testViewAllPage() throws Exception {
 		MvcResult result = this.mockmvc.perform(get("/viewlAll")).andExpect(view().name("viewall")).andReturn();
 		File file = new File("output_controller_revised.txt"); 
-		//FileUtils.write(file, "\n testShowHomePage="+(result.getResponse().getStatus() == HttpStatus.OK.value() ? true : false), true);
 		FileUtils.write(file, "\n testViewAllPage="+(result!=null ? true : false), true);
 	}
 	
@@ -95,8 +82,7 @@ class HomeControllerTest2 {
 	void testUpdatePage() throws Exception {
 		MvcResult result = this.mockmvc.perform(get("/updateNote")).andExpect(view().name("index")).andReturn();
 		File file = new File("output_controller_revised.txt"); 
-		//FileUtils.write(file, "\n testShowHomePage="+(result.getResponse().getStatus() == HttpStatus.OK.value() ? true : false), true);
-		FileUtils.write(file, "\n testViewAllPage="+(result!=null ? true : false), true);
+		FileUtils.write(file, "\n testUpdatePage="+(result!=null ? true : false), true);
 	}
-	*/
+	
 }
