@@ -55,15 +55,5 @@ public class DBConnectionTest {
 
 	
 	
-/*	@Test
-	public void testSqlException() throws IOException {
-		
-		HibernateTemplate  session = new HibernateTemplate( MasterData.getSession().getObject());
-		String hql = "FROM Notes";
-		@SuppressWarnings("unchecked")
-		List<Notes> size = (List<Notes>) session.find(hql);
-		assertNotNull(size);
-	}
-*/
-
+	
 }
