@@ -1,0 +1,3 @@
+
+ testDatabaseConnectivity = true
+ testhibernateProperties = true 
