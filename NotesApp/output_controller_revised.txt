@@ -1,4 +1,4 @@
 
- testViewAllPage=true
- testStatusPage=true
- testShowHomePage=true
+ testViewAllPage =true
+ testStatusPage =true
+ testShowHomePage =true
