@@ -1,0 +1,4 @@
+
+ testViewAllPage=true
+ testStatusPage=true
+ testShowHomePage=true

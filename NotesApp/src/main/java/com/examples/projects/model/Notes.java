@@ -1,33 +1,25 @@
 package com.examples.projects.model;
-
 import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Table;
-
 import javax.persistence.Id;
 
 @Entity
 @Table(name="notes")
 public class Notes implements Serializable {
-
 	@Id
 	@Column
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Long id;
-	
 	@Column
 	private String title;
-	
 	@Column
 	private String author;
-	
 	@Column
 	private String description;
-	
 	@Column
 	private String status;
 	
@@ -73,5 +65,4 @@ public class Notes implements Serializable {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	
 }

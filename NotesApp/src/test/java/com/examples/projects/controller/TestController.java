@@ -1,29 +1,32 @@
 package com.examples.projects.controller;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
-import java.io.File;
-import java.io.IOException;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+
+import com.examples.projects.service.NotesService;
+import com.examples.projects.service.NotesServiceImpl;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.test.web.servlet.MockMvc;
 import org.apache.commons.io.FileUtils;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
+import java.io.File;
+import java.io.IOException;
 import org.mockito.MockitoAnnotations;
-import org.springframework.http.HttpStatus;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-
-import com.examples.projects.service.NotesService;
+import org.springframework.test.web.servlet.MvcResult;
 
 public class TestController 
 {
 	@Mock
 	private NotesService notesService;
 
-	
 	@InjectMocks
 	private HomeController hController;
 
@@ -48,9 +51,8 @@ public class TestController
 	{
 		System.out.println("Inside the before..");
 		MockitoAnnotations.initMocks(this);
-		System.out.println("after the init..");
-		mockMvc = MockMvcBuilders.standaloneSetup(hController).build();
-		System.out.println("last line of  the before..");
+		this.mockMvc= MockMvcBuilders.standaloneSetup(hController).build();
+		
 	}
 
 	// -------------------------------------------------------------------------------------------------------------------
@@ -58,7 +60,7 @@ public class TestController
 	public void testLoadingPageUrl() throws Exception 
 	{
 		System.out.println("First line of loading page");
-		MvcResult result = this.mockMvc.perform(get("/")).andExpect(view().name("index")).andReturn();
+		MvcResult result = this.mockMvc.perform(get("/gotoHome")).andExpect(view().name("index")).andReturn();
 
 		File file = new File("controller_output_revised.txt");
 		FileUtils.write(file,

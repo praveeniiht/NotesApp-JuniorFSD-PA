@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.View;
 
 import com.examples.projects.model.Notes;
 import com.examples.projects.service.NotesService;
@@ -33,6 +34,7 @@ public class HomeController {
 	 	 
 	 @RequestMapping(value = "/")
 	public ModelAndView showHomePage(HttpServletResponse response) throws IOException {
+		 System.out.println("Inside the root method...");
 		return new ModelAndView("index");
 	}
 	 @RequestMapping(value = "/gotoHome")
@@ -121,7 +123,9 @@ public class HomeController {
 	public ModelAndView updateNote(@ModelAttribute("note") Notes note) {
 		System.out.println(note);
 		notesService.updateNote(note);
-		return new ModelAndView("index");
+		ModelAndView mnv = new ModelAndView();
+		mnv.setViewName("index");
+		return mnv;
 	}
 	
 	
