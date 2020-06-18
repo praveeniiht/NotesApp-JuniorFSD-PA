@@ -25,7 +25,9 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import com.examples.projects.service.NotesService;
 import com.examples.projects.service.NotesServiceImpl;
-
+import java.nio.channels.FileChannel;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 class HomeControllerTest {
 
@@ -40,9 +42,9 @@ class HomeControllerTest {
 	
 	static {
 		File file = new File("output_controller_revised.txt");
-		if (file.exists()) {
+		if (file.exists() && file.length()==0 ) {
 			try {
-				FileUtils.forceDelete(new File("output_controller_revised.txt"));
+				FileUtils.forceDelete(new File("output_functional_revised.txt"));
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				// e.printStackTrace();
@@ -56,32 +58,42 @@ class HomeControllerTest {
 		this.mockmvc = MockMvcBuilders.standaloneSetup(homeController).build();
 	}
 	
+	/*
+	 * testHomePage method is expected to test the landing page of index.jsp
+	 */
+	
 	@Test
 	void testShowHomePage() throws Exception {
 	MvcResult result = this.mockmvc.perform(get("/")).andExpect(view().name("index")).andReturn();
-	File file = new File("output_controller_revised.txt"); 
+	File file = new File("output_functional_revised.txt"); 
 	FileUtils.write(file, "\n testShowHomePage ="+(result.getResponse().getStatus() == HttpStatus.OK.value() ? true : false), true);
+	
 	}
 
-	
+	/*
+	 * testStatusPage method is expected to test the statusmanager.jsp page is 
+	 * loading expected result value is true.
+	 */
 	@Test
 	void testStatusPage() throws Exception {
 		MvcResult result = this.mockmvc.perform(get("/statusManager")).andExpect(view().name("statusmanager")).andReturn();
-		File file = new File("output_controller_revised.txt"); 
+		File file = new File("output_functional_revised.txt"); 
 		FileUtils.write(file, "\n testStatusPage ="+(result!=null ? true : false), true);
 	}
-	
+	/*
+	 * testViewAllPage method is used to test whether redirecting to 
+	 * viewAll page, expected 
+	 */
 	@Test
 	void testViewAllPage() throws Exception {
 		MvcResult result = this.mockmvc.perform(get("/viewlAll")).andExpect(view().name("viewall")).andReturn();
-		File file = new File("output_controller_revised.txt"); 
+		File file = new File("output_functional_revised.txt"); 
 		FileUtils.write(file, "\n testViewAllPage ="+(result!=null ? true : false), true);
 	}
-	
 	@Test
 	void testUpdatePage() throws Exception {
 		MvcResult result = this.mockmvc.perform(get("/updateNote")).andExpect(view().name("index")).andReturn();
-		File file = new File("output_controller_revised.txt"); 
+		File file = new File("output_functional_revised.txt"); 
 		FileUtils.write(file, "\n testUpdatePage ="+(result!=null ? true : false), true);
 	}
 	
