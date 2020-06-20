@@ -1,0 +1,83 @@
+<test-cases>
+	<cases xsi:type="java:com.assessment.data.TestCase">
+		<test-case-type>Functional</test-case-type>
+		<expected-ouput>5</expected-ouput>
+		<name>testShowHomePage</name>
+		<weight>1</weight>
+		<mandatory>true</mandatory>
+		<desc>na</desc>
+	</cases>
+	<cases xsi:type="java:com.assessment.data.TestCase">
+		<test-case-type>Functional</test-case-type>
+		<expected-ouput>1</expected-ouput>
+		<name>testStatusPage</name>
+		<weight>2</weight>
+		<mandatory>true</mandatory>
+		<desc>na</desc>
+	</cases>
+	<cases xsi:type="java:com.assessment.data.TestCase">
+		<test-case-type>Functional</test-case-type>
+		<expected-ouput>5</expected-ouput>
+		<name>testViewAllPage</name>
+		<weight>1</weight>
+		<mandatory>true</mandatory>
+		<desc>na</desc>
+	</cases>
+	<cases xsi:type="java:com.assessment.data.TestCase">
+		<test-case-type>Functional</test-case-type>
+		<expected-ouput>true</expected-ouput>
+		<name>testUpdatePage</name>
+		<weight>2</weight>
+		<mandatory>true</mandatory>
+		<desc>na</desc>
+	</cases>
+	<cases xsi:type="java:com.assessment.data.TestCase">
+		<test-case-type>Functional</test-case-type>
+		<expected-ouput>true</expected-ouput>
+		<name>testInsertNote</name>
+		<weight>2</weight>
+		<mandatory>true</mandatory>
+		<desc>na</desc>
+	</cases>
+	<cases xsi:type="java:com.assessment.data.TestCase">
+		<test-case-type>Functional</test-case-type>
+		<expected-ouput>true</expected-ouput>
+		<name>testGetNoteById</name>
+		<weight>2</weight>
+		<mandatory>true</mandatory>
+		<desc>na</desc>
+	</cases>
+	<cases xsi:type="java:com.assessment.data.TestCase">
+		<test-case-type>Functional</test-case-type>
+		<expected-ouput>true</expected-ouput>
+		<name>testViewlAll</name>
+		<weight>2</weight>
+		<mandatory>true</mandatory>
+		<desc>na</desc>
+	</cases>
+	<cases xsi:type="java:com.assessment.data.TestCase">
+		<test-case-type>Functional</test-case-type>
+		<expected-ouput>true</expected-ouput>
+		<name>testDeleteNote</name>
+		<weight>2</weight>
+		<mandatory>true</mandatory>
+		<desc>na</desc>
+	</cases>
+	<cases xsi:type="java:com.assessment.data.TestCase">
+		<test-case-type>Functional</test-case-type>
+		<expected-ouput>true</expected-ouput>
+		<name>testUpdateNote</name>
+		<weight>2</weight>
+		<mandatory>true</mandatory>
+		<desc>na</desc>
+	</cases>
+</test-cases>
+
+
+
+
+
+
+
+
+
