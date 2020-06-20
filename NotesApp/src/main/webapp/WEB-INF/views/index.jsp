@@ -11,10 +11,10 @@
 <title>Notes Application</title>
 </head>
 <body>
-<h3 align=center style="coolor:blue">Notes Management Application </h3>
-<a class="btn btn-warning" href="addNote">Add a New Note</a><br><br><br>
-<a class="btn btn-warning" href="statusManager">Status Manager</a><br><br><br>
-<a class="btn btn-warning" href="viewlAll">View All Notes</a><br><br>
+<h3 align=center style="color:#cc2900">Notes Management Application </h3>
+<a class="btn btn-info" href="addNote">Add a New Note</a><br><br><br>
+<a class="btn btn-info" href="statusManager">Status Manager</a><br><br><br>
+<a class="btn btn-info" href="viewlAll">View All Notes</a><br><br>
 
 
 </body>

@@ -13,7 +13,7 @@
 <body>
 
 <h3 align ="center" style="color:blue">Notes Status Information  </h3>
-<div><h4 align="left" style="color:blue"><a href="gotoHome">Home</a></h4></div>
+<div><h5 align="right" style="color:blue"><a href="gotoHome">Home</a></h5></div>
 <table class="table table-striped">
  
            

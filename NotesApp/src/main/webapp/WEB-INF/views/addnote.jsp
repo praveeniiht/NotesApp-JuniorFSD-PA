@@ -14,32 +14,35 @@
 <div class="container">
     <div class="row">
         <form role="form" class="col-md-9 go-right" action="addnewnote">
-            <h2>Add a New Notes</h2>
+            <h3 align="center" style="color:blue">Add a New Notes</h3>
             <div class="form-group">
-            <label for="name">Notes Title</label>
+            <label for="name" style="color:blue">Notes Title</label>
             <input id="name" name="title" type="text" class="form-control" required>
             
         </div>
         <div class="form-group">
-            <label for="name">Author</label>
+            <label for="name" style="color:blue">Author</label>
             <input id="name" name="author" type="text" class="form-control" required>
            
             
         </div>
         <div class="form-group">
-         <label for="message">Detailed Description</label>
+         <label for="message" style="color:blue">Detailed Description</label>
             <textarea id="message" name="description" class="form-control" style="height: 150px" required></textarea>
            
         </div>
          
-          <label for="name">Status of Notes</label>
+          <label for="status" style="color:blue">Status of Notes</label>
 		  <select name="status">
 		  	<option value="On Going">On Going </option>
 		  	<option value="Done">Done</option>
 		  </select>
 </div><br>
         <div class="form-group">
-          <div align="left">  <button type="submit" class="btn btn-primary">Add or Update</button> </div>
+          <div align="center">  <button type="submit" class="btn btn-primary">Add or Update</button> </div>
+        </div>
+        <div class="form-group">
+          <div align="center">  <button type="submit" class="btn btn-primary" formaction="gotoHome">Home</button> </div>
         </div>
         </form>
     </div>
